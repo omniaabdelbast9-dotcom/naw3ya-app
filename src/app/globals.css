@@ -1,217 +1,60 @@
 @import "tailwindcss";
 
-/* =========================
-   إعدادات عامة
-========================= */
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-gradient-to-br from-purple-100 via-white to-pink-100
-  text-gray-800 min-h-screen;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f3e8ff, #ffffff, #fae8ff);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: #1f2937;
 }
-
-/* =========================
-   Navbar
-========================= */
-
-.navbar {
-  @apply bg-white/80 backdrop-blur-lg
-  shadow-md border-b border-white/40
-  sticky top-0 z-50;
-}
-
-.nav-container {
-  @apply max-w-7xl mx-auto
-  flex items-center justify-between
-  px-6 py-4;
-}
-
-.logo {
-  @apply text-2xl font-extrabold
-  text-purple-700 tracking-wide;
-}
-
-.nav-links {
-  @apply flex gap-6 text-gray-700 font-medium;
-}
-
-.nav-links a {
-  @apply transition duration-300 hover:text-purple-700;
-}
-
-/* =========================
-   Hero Section
-========================= */
-
-.hero {
-  @apply text-center py-20 px-6;
-}
-
-.hero-title {
-  @apply text-5xl font-extrabold
-  text-purple-700 leading-tight;
-}
-
-.hero-text {
-  @apply text-lg text-gray-600
-  mt-6 max-w-2xl mx-auto leading-8;
-}
-
-/* =========================
-   Buttons
-========================= */
-
-.btn-primary {
-  @apply bg-purple-600 text-white
-  px-6 py-3 rounded-2xl
-  shadow-lg font-semibold
-  hover:bg-purple-700
-  hover:scale-105
-  transition duration-300;
-}
-
-.btn-secondary {
-  @apply border-2 border-purple-600
-  text-purple-700 px-6 py-3
-  rounded-2xl font-semibold
-  hover:bg-purple-100
-  transition duration-300;
-}
-
-/* =========================
-   Cards
-========================= */
 
 .card {
-  @apply bg-white/80 backdrop-blur-lg
-  rounded-3xl shadow-lg
-  border border-white/40
-  p-6 transition duration-300;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+
+  border-radius: 24px;
+  padding: 24px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
 }
 
 .card:hover {
-  @apply shadow-2xl -translate-y-1;
+  transform: translateY(-5px);
 }
 
-/* =========================
-   Titles
-========================= */
+.btn-primary {
+  background: #9333ea;
+  color: white;
 
-.section-title {
-  @apply text-3xl font-bold
-  text-purple-700 mb-6;
+  border: none;
+  padding: 12px 24px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
 }
 
-.sub-title {
-  @apply text-xl font-semibold
-  text-gray-800 mb-3;
+.btn-primary:hover {
+  background: #7e22ce;
 }
-
-/* =========================
-   Units Grid
-========================= */
-
-.units-grid {
-  @apply grid md:grid-cols-2
-  lg:grid-cols-3 gap-6;
-}
-
-.unit-card {
-  @apply card text-center;
-}
-
-.unit-card img {
-  @apply w-40 h-40 object-cover
-  mx-auto rounded-2xl mb-4;
-}
-
-.unit-card h3 {
-  @apply text-xl font-bold text-purple-700;
-}
-
-.unit-card p {
-  @apply text-gray-600 mt-2;
-}
-
-/* =========================
-   Images داخل الدروس
-========================= */
 
 .lesson-image {
-  @apply w-64 md:w-80
-  mx-auto rounded-2xl
-  shadow-lg border border-white/40;
+  width: 260px;
+
+  display: block;
+  margin: auto;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-/* =========================
-   Paragraphs
-========================= */
-
-.lesson-text {
-  @apply text-gray-700 leading-8
-  text-justify;
-}
-
-/* =========================
-   Quiz
-========================= */
-
-.quiz-box {
-  @apply card space-y-4;
-}
-
-.quiz-question {
-  @apply font-bold text-lg;
-}
-
-.quiz-input {
-  @apply border border-gray-300
-  rounded-xl p-3 w-full
-  focus:outline-none
-  focus:ring-2 focus:ring-purple-400;
-}
-
-.quiz-option {
-  @apply flex items-center gap-2
-  bg-gray-50 rounded-xl p-3
-  hover:bg-purple-50 transition;
-}
-
-.quiz-result {
-  @apply text-lg font-bold text-center;
-}
-
-/* =========================
-   Footer
-========================= */
-
-.footer {
-  @apply mt-20 bg-white/80
-  border-t border-white/40
-  py-6 text-center
-  text-gray-600;
-}
-
-/* =========================
-   Animations
-========================= */
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+ 
